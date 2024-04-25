@@ -1,5 +1,5 @@
-DROP DATABASE `crud`;
-CREATE IF NOT EXISTS DATABASE `crudo`;
+DROP DATABASE IF EXISTS `crudo`;
+CREATE DATABASE IF NOT EXISTS `crudo`;
 USE `crudo`;
 
 CREATE TABLE `productos` (
@@ -16,5 +16,5 @@ CREATE TABLE `usuarios` (
   `password` VARCHAR(20) NOT NULL
 );
 
-INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `cantidad`, `precio`) VALUES (25, 'jugo', 'bebida', 2, 7);
-INSERT INTO `usuarios` (`id`, `usuario`, `password`) VALUES (1, 'usuario1', 'usuario123');
+INSERT INTO `productos` (`nombre`, `descripcion`, `cantidad`, `precio`) VALUES ('jugo', 'bebida', 2, 7);
+INSERT INTO `usuarios` (`usuario`, `password`) VALUES ('usuario1', 'usuario123');
