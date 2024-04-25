@@ -40,12 +40,12 @@
             return $response->fetch_all(MYSQLI_ASSOC);
         }
         static function update(int $id, string $usuario, string $password) : bool {
-            $sql = "UPDATE `productos` SET `usuario` = ?, `password` = ? WHERE `id` = ?";
+            $sql = "UPDATE `usuarios` SET `usuario` = ?, `password` = ? WHERE `id` = ?";
             return prepared_query($sql, $usuario, $password, $id);
         }
         static function delete(int $id) : bool {
             $sql = "DELETE FROM `usuarios` WHERE `id` = ?";
-            return prepared_query($id);
+            return prepared_query($sql, $id);
         }
     }
 ?>
